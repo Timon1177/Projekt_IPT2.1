@@ -1,0 +1,10 @@
+﻿<Window x:Class="Finance_Lord.NicknameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NicknameWindow" Height="150" Width="300" WindowStartupLocation="CenterOwner">
+  <StackPanel Margin="10">
+    <TextBlock Text="Please enter your nickname:" Margin="0,0,0,10"/>
+    <TextBox x:Name="NicknameTextBox" Width="250" Margin="0,0,0,10"/>
+    <Button Content="OK" Width="100" Click="Button_Click"/>
+  </StackPanel>
+</Window>

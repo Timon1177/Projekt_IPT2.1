@@ -9,107 +9,110 @@
         Title="MainWindow" Height="450" Width="800">
   <Grid Background="#545454">
     <Grid.RowDefinitions>
-      <RowDefinition/>
-      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="3*" />
+      <RowDefinition Height="4*"/>
+      <RowDefinition Height="4*"/>
     </Grid.RowDefinitions>
+    <Grid Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="3*"/>
+      </Grid.ColumnDefinitions>
+      <Button Click="BtnBack" Foreground="White" BorderThickness="0" Content="&lt;--" Height="58" Background="#222223" Margin="-14,30,30,30">
+        <Button.Resources>
+          <Style TargetType="{x:Type Border}" >
+            <Setter Property="CornerRadius" Value="15"/>
+          </Style>
+        </Button.Resources>
+      </Button>
+      <TextBox x:Name="nicknametxt" Foreground="White" BorderThickness="0" Text="Nickname" FontSize="15" Padding="0px,15px" TextAlignment="Center"  Background="#222223" Grid.Column="1" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="193" IsReadOnly="True">
+        <TextBox.Resources>
+          <Style TargetType="{x:Type Border}" >
+            <Setter Property="CornerRadius" Value="15"/>
 
-    <Grid Grid.RowSpan="2">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="1*"/>
-        <RowDefinition Height="3*"/>
+          </Style>
+        </TextBox.Resources>
+      </TextBox>
+      <TextBox x:Name="konto" IsReadOnly="True" Foreground="White" BorderThickness="0" Text="Konto" FontSize="15" Padding="0px,15px" TextAlignment="Center"  Background="#222223" Grid.Column="2" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="193">
+        <TextBox.Resources>
+          <Style TargetType="{x:Type Border}" >
+            <Setter Property="CornerRadius" Value="15"/>
 
-      </Grid.RowDefinitions>
-      <Grid Grid.Row="0" >
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="100*"/>
-          <ColumnDefinition Width="234*"/>
-          <ColumnDefinition Width="234*"/>
-          <ColumnDefinition Width="234*"/>
-        </Grid.ColumnDefinitions>
+          </Style>
+        </TextBox.Resources>
+      </TextBox>
+      <TextBox Foreground="White" BorderThickness="0" IsReadOnly="True" Text="Shop" FontSize="15" Padding="0px,15px" TextAlignment="Center"  Background="#222223" Grid.Column="3" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="193">
+        <TextBox.Resources>
+          <Style TargetType="{x:Type Border}" >
+            <Setter Property="CornerRadius" Value="15"/>
 
-        <TextBox Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Nickname" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" Grid.Column="1" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" Width="193">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-
-        <TextBox x:Name="Konto" Grid.Column="2" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Konto" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" HorizontalAlignment="Center" Width="194" Height="40" VerticalAlignment="Top">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-
-        <TextBox Grid.Column="3" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Shop" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" HorizontalAlignment="Center" Width="193" Height="40" VerticalAlignment="Top">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-        <Button Click="BtnBack" Foreground="White" Margin="-104,20,0,0" BorderThickness="0" Content="                        &lt;-" FontSize="15"   Padding="7.5" Background="#222223" HorizontalAlignment="Left" Width="194" Height="40" VerticalAlignment="Top">
-          <Button.Resources>
-
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </Button.Resources>
-        </Button>
-
-
-
-      </Grid>
-      <Grid Grid.Row="1">
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="1*"/>
-          <ColumnDefinition Width="1*"/>
-
-        </Grid.ColumnDefinitions>
-        <TextBox Foreground="White"  BorderThickness="0" Text="1 Zimmer Wohnung" FontSize="15"  TextAlignment="Center" Padding="7" Background="#a6a6a6" TextChanged="TextBox_TextChanged" Margin="0,0,0,184" HorizontalAlignment="Center" Width="336" Height="142" VerticalAlignment="Bottom">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-        <Button Content="Kaufen" HorizontalAlignment="Left" Margin="301,71,0,0" BorderThickness="0" Background="#00bf63" VerticalAlignment="Top" FontSize="16" Height="59" Width="61" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Margin="200,107,0,0" TextWrapping="Wrap" Text="Preis: 100" VerticalAlignment="Top" Width="96" Height="23" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223"/>
-        <TextBox x:Name="count"  HorizontalAlignment="Left" Margin="200,71,0,0" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " VerticalAlignment="Top" Width="96" TextChanged="TextBox_TextChanged_2" FontSize="16"/>
-        <TextBox Foreground="White"  BorderThickness="0" Text="1 Zimmer Wohnung" FontSize="15"  TextAlignment="Center" Padding="7" Background="#a6a6a6" TextChanged="TextBox_TextChanged" Margin="32,0,32,184" Grid.Column="1">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-        <TextBox Foreground="White"  BorderThickness="0" Text="1 Zimmer Wohnung" FontSize="15"  TextAlignment="Center" Padding="7" Background="#a6a6a6" TextChanged="TextBox_TextChanged" Margin="32,163,32,21">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-        <TextBox Foreground="White"  BorderThickness="0" Text="1 Zimmer Wohnung" FontSize="15"  TextAlignment="Center" Padding="7" Background="#a6a6a6" TextChanged="TextBox_TextChanged" Margin="32,163,32,22" Grid.Column="1">
-          <TextBox.Resources>
-            <Style TargetType="{x:Type Border}" >
-              <Setter Property="CornerRadius" Value="15"/>
-
-            </Style>
-          </TextBox.Resources>
-        </TextBox>
-
-      </Grid>
-
+          </Style>
+        </TextBox.Resources>
+      </TextBox>
     </Grid>
+
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Column="0" Margin="20">
+        <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="1 Zimmer Wohnung" FontSize="25" >
+          <TextBox.Resources>
+            <Style TargetType="{x:Type Border}">
+              <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+          </TextBox.Resources>
+        </TextBox>
+        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" HorizontalAlignment="Right" Width="61" Height="59" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="price1zimmer" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" VerticalAlignment="Bottom" Height="23" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" HorizontalAlignment="Right" Width="96"/>
+        <TextBox x:Name="count" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="96" Height="23" VerticalAlignment="Bottom"/>
+      </Grid>
+      <Grid Grid.Column="2" Margin="20">
+        <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="3 Zimmer Wohnung" FontSize="25">
+          <TextBox.Resources>
+            <Style TargetType="{x:Type Border}">
+              <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+          </TextBox.Resources>
+        </TextBox>
+        <Button Content="Kaufen" Click="kaufenbtn2" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+        <TextBox x:Name="price3zimmer" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count2" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+      </Grid>
+    </Grid>
+    <Grid Grid.Row="2">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Column="0" Margin="20">
+        <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="Villa" FontSize="25">
+          <TextBox.Resources>
+            <Style TargetType="{x:Type Border}">
+              <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+          </TextBox.Resources>
+        </TextBox>
+        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+        <TextBox x:Name="priceVilla" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count3" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+      </Grid>
+      <Grid Grid.Column="2" Margin="20">
+        <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="5 Sterne Hotel" FontSize="25">
+          <TextBox.Resources>
+            <Style TargetType="{x:Type Border}">
+              <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+          </TextBox.Resources>
+        </TextBox>
+        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+        <TextBox x:Name="pricehotel" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count4" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+      </Grid>
+    </Grid>
+
   </Grid>
 </Window>

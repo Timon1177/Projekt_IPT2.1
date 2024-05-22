@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Finance_Lord"
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="MainWindow_Loaded">
+
   <Grid Background="#545454">
     <Grid>
       <Grid.RowDefinitions>
@@ -29,7 +31,7 @@
           </TextBox.Resources>
         </TextBox>
 
-        <TextBox IsReadOnly="True" x:Name="Konto" Grid.Column="1" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Konto" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" Height="39" VerticalAlignment="Top" HorizontalAlignment="Center" Width="226">
+        <TextBox IsReadOnly="True" x:Name="konto" Grid.Column="1" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Konto" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" Height="39" VerticalAlignment="Top" HorizontalAlignment="Center" Width="226">
           <TextBox.Resources>
             <Style TargetType="{x:Type Border}" >
               <Setter Property="CornerRadius" Value="15"/>
