@@ -13,6 +13,8 @@
       <RowDefinition Height="4*"/>
       <RowDefinition Height="4*"/>
     </Grid.RowDefinitions>
+    <TextBox Margin="700, 100, 700 ,0" VerticalAlignment="Bottom" Grid.Row="0" x:Name="verdiensttxt" FontSize="12" IsReadOnly="True" Foreground="White" Background="#a6a6a6" TextWrapping="Wrap" Text="Verdienst: 0/Sek" TextChanged="TextBox_TextChanged_3" Height="30" TextAlignment="Center" VerticalContentAlignment="Center" />
+
     <Grid Grid.Row="0">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="2*"/>
@@ -67,8 +69,9 @@
           </TextBox.Resources>
         </TextBox>
         <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" HorizontalAlignment="Right" Width="61" Height="59" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="price1zimmer" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" VerticalAlignment="Bottom" Height="23" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" HorizontalAlignment="Right" Width="96"/>
-        <TextBox x:Name="count" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="96" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="price1zimmer" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" VerticalAlignment="Bottom" Height="23" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" HorizontalAlignment="Right" Width="110"/>
+        <TextBox x:Name="count" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="110" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="plusprofit1" Margin="0,0,95,95" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Profit + = " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="110" Height="23" VerticalAlignment="Bottom"/>
       </Grid>
       <Grid Grid.Column="2" Margin="20">
         <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="3 Zimmer Wohnung" FontSize="25">
@@ -79,8 +82,8 @@
           </TextBox.Resources>
         </TextBox>
         <Button Content="Kaufen" Click="kaufenbtn2" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
-        <TextBox x:Name="price3zimmer" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="count2" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+        <TextBox x:Name="price3zimmer" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="110" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count2" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: 0" TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="110"/>
       </Grid>
     </Grid>
     <Grid Grid.Row="2">
@@ -96,9 +99,9 @@
             </Style>
           </TextBox.Resources>
         </TextBox>
-        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
-        <TextBox x:Name="priceVilla" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="count3" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="kaufenbtn3" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+        <TextBox x:Name="priceVilla" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="110" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count3" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: 0" TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="110"/>
       </Grid>
       <Grid Grid.Column="2" Margin="20">
         <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="5 Sterne Hotel" FontSize="25">
@@ -108,9 +111,9 @@
             </Style>
           </TextBox.Resources>
         </TextBox>
-        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="Button_Click" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
-        <TextBox x:Name="pricehotel" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="96" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="count4" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+        <Button Content="Kaufen" Margin="0,0,25,25" BorderThickness="0" Background="#00bf63" FontSize="16" Click="kaufenbtn4" Height="59" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+        <TextBox x:Name="pricehotel" HorizontalAlignment="Right" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" Width="110" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="count4" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: 0" TextChanged="TextBox_TextChanged_2" FontSize="16" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="110"/>
       </Grid>
     </Grid>
 
