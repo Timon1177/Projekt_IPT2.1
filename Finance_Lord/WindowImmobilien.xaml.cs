@@ -13,18 +13,23 @@ namespace Finance_Lord
     static int anzahlvilla = 0;
     static int anzahlhotel = 0;
     static double value1zimmerplus;
-    static int value1zimmer = 500;
+    static int value1zimmer = 10;
     static double value3zimmerplus;
-    static int value3zimmer = 2500;
+    static int value3zimmer = 1000;
     static double valuevillaplus;
     static int valuevilla = 5000;
     static double valuehotelplus;
     static int valuehotel = 10000;
-    public static int budget = 1000000000;
+    public static int budget = 50;
     static int profit1 = 0;
     static int profit2 = 0;
     static int profit3 = 0;
     static int profit4 = 0;
+    static double profit1plus=5;
+    static double profit2plus = 50;
+    static double profit3plus = 100;
+    static double profit4plus = 250;
+
 
 
     DispatcherTimer timer;
@@ -36,7 +41,7 @@ namespace Finance_Lord
 
 
       timer = new DispatcherTimer();
-      timer.Interval = TimeSpan.FromSeconds(1);
+      timer.Interval = TimeSpan.FromSeconds(5);
       timer.Tick += Timer_Tick;
       timer.Start();
 
@@ -54,7 +59,7 @@ namespace Finance_Lord
     }
     private void verdienstupdate(){
       int gesamtprofit = profit1 + profit2 + profit3 + profit4;
-      string profittext = "Verdienst: " + Convert.ToString(gesamtprofit) + "/sek";  
+      string profittext = "Verdienst: " + Convert.ToString(gesamtprofit) + "/ 5 sek";  
     verdiensttxt.Text = profittext;
     }
     private void WindowImmobilien_Loaded(object sender, RoutedEventArgs e)
@@ -68,6 +73,15 @@ namespace Finance_Lord
       updatecount2();
       updatecount3();
       updatecount4();
+      updateplus();
+    }
+    
+    private void updateplus()
+    {
+      plusprofit1.Text = "Profit + = " + Convert.ToInt32(profit1plus);
+      plusprofit2.Text = "Profit + = " + Convert.ToInt32(profit2plus);
+      plusprofit3.Text = "Profit + = " + Convert.ToInt32(profit3plus);
+      plusprofit4.Text = "Profit + = " + Convert.ToInt32(profit4plus);
     }
 
     public void moneyupdate()
@@ -113,17 +127,24 @@ namespace Finance_Lord
       {
         anzahl += 1;
         budget -= value1zimmer;
-        value1zimmerplus = value1zimmer * 1.2;
+        value1zimmerplus = value1zimmer * 1.3;
         value1zimmer = Convert.ToInt32(value1zimmerplus);
         price1zimmer.Text = "Preis: " + Convert.ToString(value1zimmer);
-        double profit12 = profit1 * 1.2;
+        double profit12 = profit1 * 1.3;
         profit1 = Convert.ToInt32(profit12);
         updatecount();
+        
       }
       if (anzahl == 1)
       {
-        profit1 = 10;
+        profit1 = 5;
+        
       }
+
+      profit1plus = (profit1 * 1.3) - profit1;
+      updateplus();
+      verdienstupdate();
+      moneyupdate();
     }
 
     private void updatecount()
@@ -144,11 +165,17 @@ namespace Finance_Lord
         double profit21 = profit2 * 1.2;
         profit2 = Convert.ToInt32(profit21);
         updatecount2();
+        profit2plus = (profit2 * 1.3) - profit2;
       }
       if (anzahl3zimmer == 1)
       {
         profit2 = 50;
+        profit2plus = (profit2 * 1.3) - profit2;
       }
+      
+      updateplus();
+      verdienstupdate();
+      moneyupdate();
     }
     private void updatecount2()
     {
@@ -168,11 +195,17 @@ namespace Finance_Lord
         double profit31 = profit3 * 1.2;
         profit3 = Convert.ToInt32(profit31);
         updatecount3();
+        profit3plus = (profit3 * 1.3) - profit3;
       }
       if (anzahlvilla == 1)
       {
         profit3 = 100;
+        profit3plus = (profit3 * 1.3) - profit3;
       }
+      
+      updateplus();
+      verdienstupdate();
+      moneyupdate();
 
     }
     private void updatecount3()
@@ -193,11 +226,17 @@ namespace Finance_Lord
         double profit41 = profit4 * 1.2;
         profit4 = Convert.ToInt32(profit41);
         updatecount4();
+        profit4plus = (profit4 * 1.3) - profit4;
       }
       if (anzahlhotel == 1)
       {
         profit4 = 250;
+        profit4plus = (profit4 * 1.3) - profit4;
       }
+      
+      updateplus();
+      verdienstupdate();
+      moneyupdate();
     }
     private void updatecount4()
     {

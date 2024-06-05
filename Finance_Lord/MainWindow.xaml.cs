@@ -92,5 +92,15 @@ namespace Finance_Lord
     {
 
         }
+
+    private void Btn_auktion_Click(object sender, RoutedEventArgs e)
+    {
+
     }
+
+    private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+    {
+
+    }
+  }
 }
