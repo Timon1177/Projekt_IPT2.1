@@ -72,7 +72,6 @@
         <TextBox x:Name="price1zimmer" Margin="0,0,95,25" TextWrapping="Wrap" Text="Preis: 500" VerticalAlignment="Bottom" Height="23" TextChanged="TextBox_TextChanged_1" FontSize="16" Foreground="white" Background="#222223" HorizontalAlignment="Right" Width="110"/>
         <TextBox x:Name="count" Margin="0,0,95,60" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Anzahl: " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="110" Height="23" VerticalAlignment="Bottom"/>
         <TextBox x:Name="plusprofit1" Margin="0,0,95,95" TextWrapping="Wrap" Foreground="White" Background="#222223" Text="Profit + = " TextChanged="TextBox_TextChanged_2" FontSize="16" HorizontalAlignment="Right" Width="110" Height="23" VerticalAlignment="Bottom"/>
-        <Image Source="C:\Users\bbzwadmin\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 2\IPT 2.1\Projekt_IPT2.1\Finance_Lord\kleineshaus.png" Margin="-187,20,187,20"></Image>
       </Grid>
       <Grid Grid.Column="2" Margin="20">
         <TextBox Foreground="White" Background="#a6a6a6" TextAlignment="Center" BorderThickness="0" Text="3 Zimmer Wohnung" FontSize="25">
