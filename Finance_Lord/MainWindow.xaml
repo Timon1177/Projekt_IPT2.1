@@ -39,7 +39,7 @@
           </TextBox.Resources>
         </TextBox>
 
-        <TextBox IsReadOnly="True" Grid.Column="2" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Shop" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" Height="39" VerticalAlignment="Top" HorizontalAlignment="Center" Width="227">
+        <TextBox IsReadOnly="True" Grid.Column="2" Foreground="White" Margin="0,20,0,0" BorderThickness="0" Text="Shop (in Bearbeitung)" FontSize="15"  TextAlignment="Center" Padding="7.5" Background="#222223" Height="39" VerticalAlignment="Top" HorizontalAlignment="Center" Width="227">
           <TextBox.Resources>
             <Style TargetType="{x:Type Border}" >
               <Setter Property="CornerRadius" Value="15"/>
@@ -71,11 +71,12 @@
         <Button x:Name="Btn_auktion" Grid.Column="2" Margin="10" Background="#00bf63" Click="Btn_auktion_Click">
           <TextBlock FontSize="25">Auktion</TextBlock>
         </Button>
-        <TextBox Grid.Column="1" Text="In Bearbeitung" BorderThickness="0" Margin="10,0,10,35" Background="Black" TextAlignment="Center" Foreground="White" FontSize="22" Height="34" VerticalAlignment="Bottom" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox IsReadOnly="True" Grid.Column="1" Text="In Bearbeitung" BorderThickness="0" Margin="10,0,10,35" Background="Black" TextAlignment="Center" Foreground="White" FontSize="22" Height="34" VerticalAlignment="Bottom" TextChanged="TextBox_TextChanged_1"/>
         <Button x:Name="Btn_x" Grid.Column="3" Margin="10" Background="#00bf63">
           <TextBlock FontSize="25">x</TextBlock>
         </Button>
-        <TextBox Grid.Column="2" Text="In Bearbeitung" BorderThickness="0" Margin="10,0,10,35" Background="Black" TextAlignment="Center" Foreground="White" FontSize="22" Height="34" VerticalAlignment="Bottom" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox IsReadOnly="True"  Grid.Column="3" Text="In Bearbeitung" BorderThickness="0" Margin="10,0,10,35" Background="Black" TextAlignment="Center" Foreground="White" FontSize="22" Height="34" VerticalAlignment="Bottom" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox IsReadOnly="True" Grid.Column="2" Text="In Bearbeitung" BorderThickness="0" Margin="10,0,10,35" Background="Black" TextAlignment="Center" Foreground="White" FontSize="22" Height="34" VerticalAlignment="Bottom" TextChanged="TextBox_TextChanged_1"/>
       </Grid>
     </Grid>
   </Grid>
